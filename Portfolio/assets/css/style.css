@@ -20,6 +20,12 @@ p
 	text-align: justify;
 }
 
+a
+{
+	color: lightgreen;
+	font-size: 1.5rem;
+}
+
 .entete
 {
 	min-height: 100vh;

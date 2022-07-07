@@ -3,6 +3,84 @@ body
 	background-color: #333333;
 }
 
+.home:hover
+{
+	color: lightgreen;
+}
+
+.categorie:hover
+{
+	color: lightgreen;
+}
+
+.categorie 
+{
+  position: relative;
+}
+
+.categorie::after 
+{
+  content: '';
+  transform-origin: 0 0; 
+  transform: scaleX(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: .1em; 
+  background: #78ab4e;
+  z-index: -1;
+  opacity: 1;
+  transition: transform .3s;
+}
+
+.categorie:hover::after 
+{
+  transform: scaleX(1);
+}
+
+.texte_centrer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-image: url("assets/images/Handball.jpg");
+}
+
+.outils
+{
+	display: flex;
+	flex-direction: row;
+  justify-content: flex-start;
+}
+
+.outils-centre
+{
+	display: flex;
+	flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logiciel
+{
+	height: 120px;
+	margin-top: 20px;
+}
+
+.logicielweb
+{
+	height: 140px;
+}
+
+hr
+{
+	/*background-color: lightgreen;
+	box-shadow: 1px 1px 20px 4px lightgreen, 0 2px 5px green;*/
+	margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 header
 {
 	background-color: #222222;
@@ -12,6 +90,7 @@ header
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 2;
+	box-shadow: 3px 4px 20px -5px lightgreen, 0 2px 5px green;
 }
 
 p
@@ -24,6 +103,12 @@ p
 {
 	color: lightgreen;
 	font-size: 1.5rem;
+}
+
+.lien:hover
+{
+	color: lightgreen;
+	text-decoration: underline;
 }
 
 .entete
@@ -175,10 +260,16 @@ a:hover
 
 .barre
 {
-	width: 5px;
-	height: 500px;
-	background-color: #7CFF89;
-	position: relative;
+	background-color: lightgreen;
+  position: relative;
+  height: 20px;
+  width: 80%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 60px;
+  border-radius: 25px;
+  box-shadow: 3px 4px 20px -5px lightgreen, 0 2px 5px green;
 }
 
 .balle
@@ -188,6 +279,8 @@ a:hover
 	border-radius: 50%;
 	background-color: #7CFF89;
 	place-items: center;
+	border: black;
+	box-shadow: 3px 4px 20px -5px lightgreen, 0 2px 5px green;
 }
 
 .balle:hover
@@ -223,6 +316,8 @@ a:hover
   }
 }
 
+
+
 /**Voir le js**/
 .progress
 {
@@ -248,27 +343,47 @@ a:hover
 	transition: 3s ease 0.1s;
 }
 
+/**Modification pour le responsive**/
+
 @media (max-width: 1250px)
 {
 
-.qui
-{
-	font-size: 4rem;
-}
+	.qui
+	{
+		font-size: 4rem;
+	}
 
-.quoi
-{
-	font-size: 2rem;
-}
+	.quoi
+	{
+		font-size: 2rem;
+	}
 
 }
 
 @media (max-width: 990px)
 {
 
-p
-{
-	font-size: 2em;
-}
+	p
+	{
+		font-size: 2em;
+	}
+
+.barre 
+	{
+    background-color: lightgreen;
+    position: relative;
+    height: 600px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    box-shadow: 3px 4px 20px -5px lightgreen, 0 2px 5px green;
+	}
+
+	.balle 
+	{
+    position: relative;
+    top: -500px;
+  }
 
 }
